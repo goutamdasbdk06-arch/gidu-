@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 19th Birthday My Love 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+overflow:hidden;
+font-family:'Poppins',sans-serif;
+background:black;
+height:100vh;
+perspective:2000px;
+}
+
+/* Ultra Animated Background */
+
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top left,#ff1493 0%,transparent 30%),
+radial-gradient(circle at bottom right,#ff66cc 0%,transparent 30%),
+radial-gradient(circle at center,#220022 0%,#05010d 70%);
+overflow:hidden;
+}
+
+/* Animated Glow Waves */
+
+.wave{
+position:absolute;
+width:1200px;
+height:1200px;
+border-radius:50%;
+border:2px solid rgba(255,255,255,0.08);
+animation:rotate 25s linear infinite;
+}
+
+.wave:nth-child(1){
+top:-400px;
+left:-400px;
+}
+
+.wave:nth-child(2){
+bottom:-500px;
+right:-500px;
+animation-direction:reverse;
+animation-duration:40s;
+}
+
+@keyframes rotate{
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
+}
+
+/* Floating Hearts */
+
+.heart{
+position:absolute;
+font-size:30px;
+animation:floatUp linear infinite;
+opacity:0.8;
+filter:drop-shadow(0 0 15px hotpink);
+}
+
+@keyframes floatUp{
+0%{
+transform:translateY(100vh) scale(0.5);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) scale(1.8) rotate(360deg);
+opacity:0;
+}
+}
+
+/* Sparkles */
+
+.sparkle{
+position:absolute;
+width:4px;
+height:4px;
+background:white;
+border-radius:50%;
+animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+from{
+opacity:0.3;
+transform:scale(0.5);
+}
+to{
+opacity:1;
+transform:scale(2);
+}
+}
+
+/* Main 3D Card */
+
+.container{
+position:relative;
+z-index:5;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.card{
+width:1000px;
+height:620px;
+position:relative;
+transform-style:preserve-3d;
+transition:transform 2s ease;
+cursor:pointer;
+}
+
+.card.open{
+transform:rotateY(180deg);
+}
+
+/* Front */
+
+.front,
+.back{
+position:absolute;
+width:100%;
+height:100%;
+border-radius:45px;
+backface-visibility:hidden;
+overflow:hidden;
+box-shadow:
+0 0 60px rgba(255,20,147,0.5),
+0 0 120px rgba(255,105,180,0.2);
+}
+
+/* FRONT SIDE */
+
+.front{
+background:
+linear-gradient(145deg,
+rgba(255,255,255,0.1),
+rgba(255,255,255,0.05));
+backdrop-filter:blur(20px);
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+border:1px solid rgba(255,255,255,0.2);
+}
+
+/* Neon Ring */
+
+.ring{
+position:absolute;
+width:500px;
+height:500px;
+border-radius:50%;
+border:3px solid rgba(255,255,255,0.1);
+animation:ringRotate 10s linear infinite;
+}
+
+@keyframes ringRotate{
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
+}
+
+.title{
+font-family:'Great Vibes',cursive;
+font-size:95px;
+color:white;
+text-shadow:
+0 0 20px #ff1493,
+0 0 50px #ff69b4,
+0 0 90px hotpink;
+animation:glow 2s infinite alternate;
+z-index:2;
+}
+
+@keyframes glow{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.03);
+}
+}
+
+.subtitle{
+font-size:30px;
+margin-top:15px;
+font-weight:600;
+color:#ffe6f2;
+z-index:2;
+}
+
+.open-btn{
+margin-top:45px;
+padding:18px 50px;
+font-size:22px;
+border:none;
+border-radius:60px;
+background:linear-gradient(45deg,#ff1493,#ff66cc);
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.5s;
+box-shadow:0 0 30px hotpink;
+z-index:2;
+}
+
+.open-btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 60px hotpink;
+}
+
+/* BACK */
+
+.back{
+transform:rotateY(180deg);
+background:
+linear-gradient(135deg,
+rgba(20,0,40,0.95),
+rgba(60,0,80,0.95));
+backdrop-filter:blur(25px);
+display:flex;
+padding:40px;
+justify-content:space-between;
+align-items:center;
+}
+
+/* Left */
+
+.left{
+width:52%;
+color:white;
+}
+
+.left h2{
+font-family:'Great Vibes',cursive;
+font-size:65px;
+margin-bottom:20px;
+text-shadow:0 0 15px hotpink;
+}
+
+.message{
+font-size:18px;
+line-height:2;
+color:#ffe6f5;
+background:rgba(255,255,255,0.06);
+padding:25px;
+border-radius:25px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 25px rgba(255,255,255,0.08);
+}
+
+/* Teddy */
+
+.teddy{
+font-size:150px;
+margin-top:25px;
+animation:bounce 2s infinite;
+filter:drop-shadow(0 0 25px hotpink);
+text-align:center;
+}
+
+@keyframes bounce{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-15px);
+}
+}
+
+/* Right Side */
+
+.right{
+width:42%;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+/* 3D Cake */
+
+.cake{
+position:relative;
+width:260px;
+height:260px;
+transform-style:preserve-3d;
+animation:cakeFloat 4s infinite ease-in-out;
+}
+
+@keyframes cakeFloat{
+0%,100%{
+transform:translateY(0) rotateY(0deg);
+}
+50%{
+transform:translateY(-15px) rotateY(15deg);
+}
+}
+
+.layer{
+position:absolute;
+border-radius:25px;
+left:50%;
+transform:translateX(-50%);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.layer1{
+bottom:0;
+width:240px;
+height:80px;
+background:#ff66b3;
+}
+
+.layer2{
+bottom:75px;
+width:190px;
+height:70px;
+background:#ff99cc;
+}
+
+.layer3{
+bottom:140px;
+width:140px;
+height:60px;
+background:#ffd6ea;
+}
+
+.candle{
+position:absolute;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+width:20px;
+height:60px;
+background:white;
+border-radius:15px;
+}
+
+.flame{
+position:absolute;
+top:-18px;
+left:-2px;
+width:24px;
+height:24px;
+background:gold;
+border-radius:50%;
+box-shadow:0 0 30px yellow;
+animation:flicker .3s infinite alternate;
+}
+
+@keyframes flicker{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.25);
+}
+}
+
+/* Surprise Buttons */
+
+.surprises{
+margin-top:35px;
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.s-btn{
+padding:14px 24px;
+border:none;
+border-radius:50px;
+background:rgba(255,255,255,0.12);
+color:white;
+font-size:17px;
+cursor:pointer;
+transition:0.4s;
+backdrop-filter:blur(10px);
+box-shadow:0 0 15px rgba(255,255,255,0.1);
+}
+
+.s-btn:hover{
+transform:translateY(-5px) scale(1.05);
+background:#ff1493;
+}
+
+/* Popup */
+
+.popup{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) scale(0);
+background:rgba(20,0,30,0.95);
+padding:40px;
+width:550px;
+border-radius:30px;
+text-align:center;
+color:white;
+z-index:999;
+backdrop-filter:blur(15px);
+box-shadow:0 0 50px hotpink;
+transition:0.5s;
+}
+
+.popup.show{
+transform:translate(-50%,-50%) scale(1);
+}
+
+.popup h1{
+font-family:'Great Vibes',cursive;
+font-size:58px;
+margin-bottom:20px;
+color:#ffb6d9;
+}
+
+.popup p{
+font-size:19px;
+line-height:2;
+color:#ffeaf5;
+}
+
+.close{
+margin-top:25px;
+padding:12px 30px;
+border:none;
+border-radius:50px;
+background:#ff1493;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+/* Music */
+
+.music{
+position:fixed;
+bottom:20px;
+right:20px;
+padding:16px 28px;
+border:none;
+border-radius:50px;
+background:linear-gradient(45deg,#ff1493,#ff66cc);
+color:white;
+font-size:18px;
+cursor:pointer;
+box-shadow:0 0 30px hotpink;
+z-index:999;
+transition:0.3s;
+}
+
+.music:hover{
+transform:scale(1.1);
+}
+
+/* Responsive */
+
+@media(max-width:1100px){
+
+.card{
+width:95%;
+height:90vh;
+}
+
+.back{
+flex-direction:column;
+overflow-y:auto;
+}
+
+.left,.right{
+width:100%;
+}
+
+.left{
+text-align:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg">
+
+<div class="wave"></div>
+<div class="wave"></div>
+
+</div>
+
+<!-- Sparkles -->
+
+<script>
+
+for(let i=0;i<150;i++){
+
+let s=document.createElement('div');
+
+s.className='sparkle';
+
+s.style.left=Math.random()*100+'vw';
+
+s.style.top=Math.random()*100+'vh';
+
+s.style.animationDelay=Math.random()*3+'s';
+
+document.body.appendChild(s);
+
+}
+
+</script>
+
+<!-- Hearts -->
+
+<script>
+
+const hearts=['💖','💕','💗','💞','✨'];
+
+for(let i=0;i<40;i++){
+
+let h=document.createElement('div');
+
+h.className='heart';
+
+h.innerHTML=hearts[Math.floor(Math.random()*hearts.length)];
+
+h.style.left=Math.random()*100+'vw';
+
+h.style.animationDuration=(Math.random()*8+6)+'s';
+
+h.style.fontSize=(Math.random()*30+18)+'px';
+
+h.style.animationDelay=Math.random()*6+'s';
+
+document.body.appendChild(h);
+
+}
+
+</script>
+
+<div class="container">
+
+<div class="card" id="card">
+
+<!-- FRONT -->
+
+<div class="front">
+
+<div class="ring"></div>
+
+<h1 class="title">
+Happy Birthday 💖
+</h1>
+
+<div class="subtitle">
+19 Years Of Pure Beauty ✨
+</div>
+
+<button class="open-btn" onclick="openCard()">
+Open Your Love Surprise 🎁
+</button>
+
+</div>
+
+<!-- BACK -->
+
+<div class="back">
+
+<div class="left">
+
+<h2>My Beautiful Princess 💕</h2>
+
+<div class="message">
+
+Happy 19th Birthday to the most precious person of my life 💖✨  
+Every moment with you feels magical 🌸  
+Your smile shines brighter than stars and your eyes hold the most beautiful universe 💕  
+
+You are not just my love…  
+You are my peace, my happiness, my safe place and my favorite blessing 💗  
+
+Whenever I talk to you, my heart feels calm 💞  
+Whenever you smile, my world becomes beautiful 🌹✨  
+
+On this special day, I just want to hold your hand forever and remind you how deeply special you are to me 💖  
+
+I promise to always love you, protect your smile and stand beside you through every happiness and every storm 💕  
+
+You are the most beautiful chapter of my life and I never want our story to end ✨💗  
+
+Forever Yours 😚💖
+
+</div>
+
+<div class="teddy">
+🧸💝
+</div>
+
+</div>
+
+<div class="right">
+
+<!-- Cake -->
+
+<div class="cake">
+
+<div class="layer layer1"></div>
+<div class="layer layer2"></div>
+<div class="layer layer3"></div>
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+</div>
+
+<h2 style="font-family:'Great Vibes',cursive;font-size:48px;color:white;margin-top:20px;">
+Make A Wish ✨
+</h2>
+
+<div class="surprises">
+
+<button class="s-btn" onclick="showPopup('love')">
+💌 Love Letter
+</button>
+
+<button class="s-btn" onclick="showPopup('hug')">
+🤗 Virtual Hug
+</button>
+
+<button class="s-btn" onclick="showPopup('kiss')">
+😘 Sweet Kiss
+</button>
+
+<button class="s-btn" onclick="showPopup('forever')">
+💍 Forever Promise
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- POPUP -->
+
+<div class="popup" id="popup">
+
+<h1 id="popupTitle"></h1>
+
+<p id="popupText"></p>
+
+<button class="close" onclick="closePopup()">
+Close 💖
+</button>
+
+</div>
+
+
+<!-- MUSIC BUTTON -->
+
+<button class="music" onclick="playMusic()">
+🎵 Play Romantic Song
+</button>
+
+<!-- YOUR CUSTOM SONG -->
+
+<audio id="song" loop>
+
+<source src="South Hearts V.mp3" type="audio/mpeg">
+
+</audio>
+
+<script>
+
+function playMusic(){
+
+let music = document.getElementById('song');
+
+music.play();
+
+}
+
+/* OPTIONAL AUTO PLAY AFTER OPENING CARD */
+
+function openCard(){
+
+document.getElementById('card').classList.toggle('open');
+
+document.getElementById('song').play();
+
+confetti();
+
+}
+
+</script>
+
+/* Popup Messages */
+
+function showPopup(type){
+
+const popup=document.getElementById('popup');
+
+const title=document.getElementById('popupTitle');
+
+const text=document.getElementById('popupText');
+
+popup.classList.add('show');
+
+if(type==='love'){
+
+title.innerHTML='💌 My Love Letter';
+
+text.innerHTML='You are the most beautiful feeling my heart has ever known 💖 Every heartbeat of mine whispers your name and every dream of mine begins with you ✨';
+
+}
+
+if(type==='hug'){
+
+title.innerHTML='🤗 Tightest Hug';
+
+text.innerHTML='Sending you the warmest virtual hug filled with endless love, comfort, happiness and millions of kisses 💕✨';
+
+}
+
+if(type==='kiss'){
+
+title.innerHTML='😘 Sweet Kiss';
+
+text.innerHTML='A magical forehead kiss for my princess to remind her how deeply loved, precious and beautiful she is 💖';
+
+}
+
+if(type==='forever'){
+
+title.innerHTML='💍 Forever Promise';
+
+text.innerHTML='No matter how many years pass, my heart will always choose you, love you and stay yours forever 💞✨';
+
+}
+
+confetti();
+
+}
+
+function closePopup(){
+
+document.getElementById('popup').classList.remove('show');
+
+}
+
+/* Music */
+
+function playMusic(){
+
+document.getElementById('song').play();
+
+}
+
+/* Confetti */
+
+function confetti(){
+
+for(let i=0;i<150;i++){
+
+let c=document.createElement('div');
+
+c.innerHTML=['💖','💕','✨','🎉','💗','💞'][Math.floor(Math.random()*6)];
+
+c.style.position='fixed';
+
+c.style.left=Math.random()*100+'vw';
+
+c.style.top='-20px';
+
+c.style.fontSize=(Math.random()*25+15)+'px';
+
+c.style.zIndex='9999';
+
+c.style.animation=`fall ${Math.random()*3+2}s linear forwards`;
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+
+c.remove();
+
+},5000);
+
+}
+
+}
+
+let style=document.createElement('style');
+
+style.innerHTML=`
+
+@keyframes fall{
+
+to{
+
+transform:translateY(110vh) rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+`;
+
+document.head.appendChild(style);
+
+</script>
+
+</body>
+</html>
